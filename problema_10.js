@@ -9,7 +9,7 @@ if (raiz < 0){
 } else if (raiz > 0){
     alert(eqcuad (a , b, raiz));
 } else {
-    alert("Alguno de los valores que introduciste no es un numero.");
+    alert("Alguno de los valores introducidos no es un numero.");
 }
 
 function eqcuad(a, b, raiz){
