@@ -1,16 +1,19 @@
-var matriz = [1, 2, 3, 4, 6];
-var sum = 6;
-function searchPair(matriz, sum) {
-    var i = 0;
-    var j = matriz.length - 1;
-    while (i < j) {
-        if (matriz[i] + matriz[j] == sum) {
-            return [i, j];
-        } else if (matriz[i] + matriz[j] < sum) {
-            i++;
-        } else {
-            j--;
+const slidingWindow = (arr, k) => {
+    let start= 0;
+    let max = 0;
+    let sum = 0; 
+
+    for (let end = 0; end < arr.length; end++) {
+        sum += arr[end];
+        if (end >= k-1) {
+            max = Math.max(max, sum);
+            sum -= arr[start];
+            start++;
         }
     }
+    console.log(max);
+    return max;
+
 }
-console.log(searchPair(matriz, sum));
+
+slidingWindow([2,1,5,1,3,2], 3);
