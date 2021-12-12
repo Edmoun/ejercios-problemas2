@@ -5,7 +5,7 @@ var c = 1 * prompt ("Introduce el valor de (c).");
 var raiz = (b ** 2) - 4 * (a * c);
 
 if (raiz < 0){
-    alert("El resultado de la raiz da un numero negativo, ingresa otros valores.");
+    alert("El resultado es negativo, ingresa otro numero.");
 } else if (raiz > 0){
     alert(eqcuad (a , b, raiz));
 } else {
